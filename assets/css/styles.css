@@ -2,79 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     font-family: Arial, sans-serif;
 }
 
-.navbar {
-    background-color: #333;
-    overflow: hidden;
-    padding: 25px;
-    position: relative;
-    z-index: 1;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
+nav{
     padding: 0;
-    display: flex;
-    justify-content: space-around;
+    margin: 0;
+
 }
 
-.navbar ul li {
-    position: relative;
-}
-
-.navbar ul li a {
-    display: block;
+.nav-title {
     color: white;
+    padding: 20px;
+    font-size: 28px;
     text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 20px 30px 20px 30px;
-}
-
-.navbar ul li a:hover {
     background-color: #575757;
 }
 
-.dropdown-box {
-    display: none;
+ul {
+    list-style: none;
+    background: #575757;
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background: #575757;
     position: absolute;
-    top: 100%; /* Aparece justo debajo del enlace de Categorías */
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
-    padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
-    z-index: 10;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto de caja */
-    min-width: 200px; /* Ancho mínimo del box */
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background: #333;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
 }
 
 .dropdown:hover .dropdown-box {
     display: block;
-}
-
-.dropdown-box ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-box ul li a {
-    padding: 12px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #575757;
-}
-
-.dropdown-box ul li a:hover {
-    background-color: #575757;
 }
 
 .contenedor {
