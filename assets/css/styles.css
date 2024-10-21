@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px 30px 20px 30px;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
+.dropdown-box {
+    display: none;
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del enlace de Categorías */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    z-index: 10;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto de caja */
+    min-width: 200px; /* Ancho mínimo del box */
+}
+
+.dropdown:hover .dropdown-box {
+    display: block;
+}
+
+.dropdown-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-box ul li a {
+    padding: 12px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #575757;
+}
+
+.dropdown-box ul li a:hover {
+    background-color: #575757;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila cuando no haya espacio */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 220px;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.box-1 {
+    width: 100%;
+    height: 220px;
+    overflow: hidden; /* Asegura que la imagen no se salga del box */
+}
+
+.box-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y cubre todo el espacio */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #28a745;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
