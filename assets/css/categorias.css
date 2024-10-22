@@ -1,4 +1,65 @@
-body {
-    padding: 0;
-    margin: 0;
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cards se reorganicen en filas cuando no haya espacio */
+    justify-content: space-around; /* Distribuye el espacio entre los cards */
+    gap: 20px; /* Espacio entre los cards */
+    padding: 20px;
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Hace que cada card ocupe un tercio del ancho menos el margen */
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.box-1 {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.box-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #28a745;
 }
