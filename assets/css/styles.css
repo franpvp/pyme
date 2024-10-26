@@ -62,6 +62,7 @@ ul li ul.dropdown {
     position: absolute;
     z-index: 999;
     display: none;
+    padding: 0;
 }
 
 ul li ul.dropdown:hover {
