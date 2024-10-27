@@ -16,7 +16,6 @@ body {
 nav{
     padding: 0;
     margin: 0;
-
 }
 
 .nav-title {
@@ -25,9 +24,10 @@ nav{
     font-size: 28px;
     text-align: center;
     background-color: #575757;
+    margin: 0;
 }
 
-.nav-link{
+.nav-link {
     border-radius: 20px !important;
     color: white !important;
 }
@@ -36,6 +36,9 @@ ul {
     list-style: none;
     background: #575757;
     display: flex;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
 }
 
 ul li {
@@ -45,11 +48,12 @@ ul li {
 
 ul li a {
     display: block;
-    padding: 20px 25px;
+    padding: 16px 25px;
     color: #FFF;
     text-decoration: none;
     text-align: center;
     font-size: 20px;
+    border-radius: 16px;
 }
 
 ul li ul.dropdown li {
@@ -63,6 +67,7 @@ ul li ul.dropdown {
     z-index: 999;
     display: none;
     padding: 0;
+    border-radius: 0px 0px 16px 16px;
 }
 
 ul li ul.dropdown:hover {
@@ -80,8 +85,6 @@ ul li:hover ul.dropdown {
 .dropdown:hover .dropdown-box {
     display: block;
 }
-
-
 
 .contenedor {
     display: flex;
